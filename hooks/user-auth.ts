@@ -1,7 +1,7 @@
-import useSWR, { PublicConfiguration } from 'swr';
+import useSWR, { SWRConfiguration } from 'swr';
 import { authApi } from '@/api/index';
 
-export function useAuth(options?: Partial<PublicConfiguration>) {
+export function useAuth(options?: Partial<SWRConfiguration>) {
     const {
         data: json,
         error,
