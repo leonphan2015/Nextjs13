@@ -2,6 +2,7 @@ import * as React from 'react';
 import { useAuth } from '@/hooks/index';
 import { MainLayout } from '@/components/layout';
 import { useRouter } from 'next/router';
+import { LoginForm } from '@/components/auth';
 
 export default function LoginPage() {
     const router = useRouter()
@@ -26,6 +27,7 @@ export default function LoginPage() {
             <p>Profile: {JSON.stringify(profile || {}, null, 4)}</p>
 
             <button onClick={handleLoginClick}>Login</button>
+            <LoginForm />
         </div>
     );
 }
